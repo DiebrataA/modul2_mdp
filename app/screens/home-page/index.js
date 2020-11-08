@@ -32,23 +32,26 @@ export default function Index({navigation}) {
 
   return (
     <SafeAreaView style={Styles.container}>
-      <ScrollView style={Styles.scrollView}>
-        <Text>KELOMPOK XX</Text>
-        {userData.map(item => (
-          <TouchableOpacity
-            key={item.id}
-            style={Styles.cardView}
-            onPress={() => onPressCardView(item)}>
-            <View style={Styles.cardView1}>
-              <Image source={{uri: item.avatar}} style={Styles.image} />
-            </View>
-            <View style={Styles.cardView2}>
-              <Text style={Styles.text}>{`${item.first_name} ${
-                item.last_name
-              }`}</Text>
-            </View>
-          </TouchableOpacity>
-        ))}
+      <ScrollView>
+        <View style={Styles.titleContainer}>
+          <Text style={Styles.title}>KELOMPOK XYY</Text>
+        </View>
+        <View style={Styles.scrollView}>
+          {userData.map(item => (
+            <TouchableOpacity
+              key={item.id}
+              style={Styles.cardView}
+              onPress={() => onPressCardView(item)}>
+              <View style={Styles.cardView1}>
+                <Image source={{uri: item.avatar}} style={Styles.image} />
+              </View>
+              <View style={Styles.cardView2}>
+                <Text style={Styles.text1}>{`${item.first_name}`}</Text>
+                <Text style={Styles.text2}>{`${item.last_name}`}</Text>
+              </View>
+            </TouchableOpacity>
+          ))}
+        </View>
       </ScrollView>
     </SafeAreaView>
   );

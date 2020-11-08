@@ -5,34 +5,64 @@ const {width} = Dimensions.get('window');
 const main = StyleSheet.create({
   container: {
     width,
-    backgroundColor: '#ffffff',
+    backgroundColor: '#f5f5f5',
+    fontFamily: 'roboto',
   },
   scrollView: {
     width,
+    backgroundColor: '#f5f5f5',
     paddingLeft: 10,
     paddingRight: 10,
+    marginVertical: 8,
   },
   cardView: {
-    width: '100%',
-    height: 170,
+    backgroundColor: '#fff',
+    borderRadius: 5,
     flexDirection: 'row',
+    margin: 5,
+    padding: 15,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.35,
+    shadowRadius: 5,
+    elevation: 2.5,
   },
   cardView1: {
-    width: '40%',
-    height: 170,
     justifyContent: 'center',
   },
   cardView2: {
-    width: '60%',
-    height: 170,
+    display: 'flex',
+    paddingLeft: 15,
+    justifyContent: 'center',
   },
   image: {
-    width: 150,
-    height: 150,
+    width: 130,
+    height: 130,
+    borderRadius: 100,
   },
-  text: {
-    fontSize: 15,
-    marginTop: 15,
+  text1: {
+    fontSize: 25,
+    fontWeight: 'bold',
+    letterSpacing: 0.3,
+  },
+  text2: {
+    fontSize: 16,
+    letterSpacing: 0.3,
+    paddingTop: 3,
+  },
+  titleContainer: {
+    height: 70,
+    justifyContent: 'center',
+    paddingLeft: 15,
+    alignItems: 'center',
+    backgroundColor: '#265685',
+  },
+  title: {
+    fontSize: 25,
+    color: '#FFF',
   },
 });
 
