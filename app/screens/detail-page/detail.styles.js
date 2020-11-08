@@ -19,6 +19,7 @@ const main = StyleSheet.create({
   view1: {
     justifyContent: 'center',
     marginBottom: 20,
+    alignItems: 'center',
   },
   view2: {
     backgroundColor: '#fff',
