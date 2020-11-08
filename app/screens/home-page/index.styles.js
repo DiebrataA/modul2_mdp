@@ -56,7 +56,6 @@ const main = StyleSheet.create({
   titleContainer: {
     height: 70,
     justifyContent: 'center',
-    paddingLeft: 15,
     alignItems: 'center',
     backgroundColor: '#265685',
   },
