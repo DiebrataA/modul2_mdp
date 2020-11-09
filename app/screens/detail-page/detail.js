@@ -6,24 +6,50 @@ import Styles from './detail.styles';
 export default function Detail({route}) {
   const {item} = route.params;
 
+  const anggota = [
+    {
+      id: 1,
+      nama: 'Anggota 1',
+    },
+    {
+      id: 2,
+      nama: 'Anggota 2',
+    },
+    {
+      id: 3,
+      nama: 'Anggota 3',
+    },
+    {
+      id: 4,
+      nama: 'Anggota 4',
+    },
+  ];
+
   return (
     <SafeAreaView style={Styles.container}>
       <ScrollView style={Styles.scrollView}>
         <View style={Styles.view}>
-          <Text>KELMPOK XX</Text>
+          <View style={Styles.titleContainer}>
+            <Text style={Styles.title}>KELOMPOK XYY</Text>
+          </View>
           <View style={Styles.view1}>
             <Image source={{uri: item.avatar}} style={Styles.image} />
+            <View style={Styles.nameView}>
+              <Text style={Styles.nameText}>{`${item.first_name} ${
+                item.last_name
+              }`}</Text>
+              <Text style={Styles.emailText}>{item.email}</Text>
+            </View>
           </View>
           <View style={Styles.view2}>
-            <Text style={Styles.text}>{`${item.first_name} ${
-              item.last_name
-            }`}</Text>
-            <Text style={Styles.text}>{item.email}</Text>
-            <Text style={Styles.text}>Anggota Kelompok</Text>
-            <Text style={Styles.text}>Anggota 1</Text>
-            <Text style={Styles.text}>Anggota 2</Text>
-            <Text style={Styles.text}>Anggota 3</Text>
-            <Text style={Styles.text}>Anggota 4</Text>
+            <View style={{marginBottom: 10}}>
+              <Text style={Styles.text}>Anggota Kelompok</Text>
+            </View>
+            {anggota.map(nama => (
+              <View key={nama.id} style={Styles.list}>
+                <Text style={Styles.text}>{nama.nama}</Text>
+              </View>
+            ))}
           </View>
         </View>
       </ScrollView>
