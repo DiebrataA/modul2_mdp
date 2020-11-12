@@ -1,9 +1,11 @@
 import React from 'react';
-import {View, SafeAreaView, ScrollView, Text} from 'react-native';
+import {View, SafeAreaView, ScrollView, Image, Text} from 'react-native';
 
 import Styles from './detail.styles';
 
-export default function Detail() {
+export default function Detail({route}) {
+  const {item} = route.params;
+
   const anggota = [
     {
       id: 1,
@@ -30,13 +32,22 @@ export default function Detail() {
           <View style={Styles.titleContainer}>
             <Text style={Styles.title}>KELOMPOK XYY</Text>
           </View>
+          <View style={Styles.view1}>
+            <Image source={{uri: item.avatar}} style={Styles.image} />
+            <View style={Styles.nameView}>
+              <Text style={Styles.nameText}>{`${item.first_name} ${
+                item.last_name
+              }`}</Text>
+              <Text style={Styles.emailText}>{item.email}</Text>
+            </View>
+          </View>
           <View style={Styles.view2}>
             <View style={{marginBottom: 10}}>
               <Text style={Styles.text}>Anggota Kelompok</Text>
             </View>
-            {anggota.map(item => (
-              <View key={item.id} style={Styles.list}>
-                <Text style={Styles.text}>{item.nama}</Text>
+            {anggota.map(nama => (
+              <View key={nama.id} style={Styles.list}>
+                <Text style={Styles.text}>{nama.nama}</Text>
               </View>
             ))}
           </View>

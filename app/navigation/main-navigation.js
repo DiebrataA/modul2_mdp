@@ -6,7 +6,7 @@ import DetailPage from '../screens/detail-page/detail';
 const Stack = createStackNavigator();
 
 export default () => (
-  <Stack.Navigator>
+  <Stack.Navigator initialRouteName="Home Page">
     <Stack.Screen name="Home Page" component={HomePage} />
     <Stack.Screen name="Detail Page" component={DetailPage} />
   </Stack.Navigator>
