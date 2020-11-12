@@ -27,6 +27,7 @@ export default function Detail({route}) {
 
   return (
     <SafeAreaView style={Styles.container}>
+      <View style={Styles.cobaja} />
       <ScrollView style={Styles.scrollView}>
         <View style={Styles.view}>
           <View style={Styles.titleContainer}>

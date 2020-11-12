@@ -8,9 +8,9 @@ const main = StyleSheet.create({
   },
   scrollView: {
     width,
-    backgroundColor: '#f5f5f5',
     paddingLeft: 10,
     paddingRight: 10,
+    position: 'absolute',
   },
   view: {
     flex: 1,
@@ -24,15 +24,17 @@ const main = StyleSheet.create({
   view2: {
     backgroundColor: '#fff',
     flex: 1,
-    width: '100%',
+    width: '95%',
     paddingHorizontal: 20,
     paddingVertical: 40,
-    borderRadius: 30,
+    borderRadius: 10,
   },
   image: {
     width: 150,
     height: 150,
     borderRadius: 100,
+    borderWidth: 3,
+    borderColor: '#FFF',
   },
   text: {
     fontSize: 15,
@@ -44,7 +46,7 @@ const main = StyleSheet.create({
   },
   title: {
     fontSize: 25,
-    color: '#000',
+    color: '#FFF',
   },
   nameView: {
     marginTop: 8,
@@ -63,6 +65,13 @@ const main = StyleSheet.create({
     paddingVertical: 8,
     borderBottomWidth: 0.5,
     borderColor: '#a5a5a5',
+  },
+  cobaja: {
+    backgroundColor: '#960004',
+    height: 180,
+    width,
+    borderBottomLeftRadius: 30,
+    borderBottomRightRadius: 30,
   },
 });
 

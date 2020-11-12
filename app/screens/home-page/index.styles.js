@@ -57,7 +57,7 @@ const main = StyleSheet.create({
     height: 70,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#265685',
+    backgroundColor: '#960004',
   },
   title: {
     fontSize: 25,
